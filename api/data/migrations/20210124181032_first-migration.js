@@ -10,7 +10,7 @@ exports.up = async (knex) => {
     })
     .createTable('categories', (category) => {
       category.increments('category_id')
-      category.string('name', 200)
+      category.string('category', 200)
         .notNullable()
         .unique()
     })
@@ -32,7 +32,7 @@ exports.up = async (knex) => {
     })
     .createTable('ingredients', (ingredient) => {
       ingredient.increments('ingredient_id')
-      ingredient.string('name')
+      ingredient.string('ingredient')
         .notNullable()
         .unique()
     })

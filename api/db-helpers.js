@@ -12,7 +12,7 @@ const findUserBy = (filter) => {
 const getAllRecipes = () => {
     return db('recipes as r')
         .join('categories as c', 'r.category_id', 'c.category_id')
-        .select('r.recipe_id', 'r.title', 'r.source', 'r.instructions', 'c.name')
+        .select('r.recipe_id', 'r.title', 'r.source', 'r.instructions', 'c.category')
 }
 
 module.exports = {

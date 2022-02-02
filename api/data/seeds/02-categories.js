@@ -8,8 +8,8 @@
     .then(function () {
       // Inserts seed entries
       return knex('categories').insert([
-        {name: 'Dinner'},
-        {name: 'Dessert'}
+        {category: 'Dinner'},
+        {category: 'Dessert'}
       ]);
     });
 };

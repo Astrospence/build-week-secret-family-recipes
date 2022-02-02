@@ -8,11 +8,11 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('ingredients').insert([
-        {name: 'Maccaroni noodles'},
-        {name: 'Cheese'},
-        {name: 'Flour'},
-        {name: 'eggs'},
-        {name: 'milk'}
+        {ingredient: 'Maccaroni noodles'},
+        {ingredient: 'Cheese'},
+        {ingredient: 'Flour'},
+        {ingredient: 'eggs'},
+        {ingredient: 'milk'}
       ]);
     });
 };
