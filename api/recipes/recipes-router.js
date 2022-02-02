@@ -1,7 +1,12 @@
 const router = require('express').Router()
+const Helpers = require('../db-helpers')
 
 router.get('/', (req, res, next) => {
-    console.log('get all recipes')
+    Helpers.getAllRecipes()
+        .then(response => {
+            res.status(200).json(response)
+        })
+        .catch(next)
 })
 
 router.get('/:id', (req, res, next) => {
